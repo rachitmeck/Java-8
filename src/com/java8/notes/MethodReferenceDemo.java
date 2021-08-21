@@ -15,6 +15,7 @@ public class MethodReferenceDemo {
 		fc.onlyOneAbstractMethod();
 		fc.manyDefault();
 		fc.manyDefault2();
+	
 
 	}
 
