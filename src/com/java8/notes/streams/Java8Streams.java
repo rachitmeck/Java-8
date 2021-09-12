@@ -1,6 +1,7 @@
 package com.java8.notes.streams;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -64,7 +65,11 @@ public class Java8Streams {
 		Stream.of(1, 11, 222, 22333, 32323).forEach(z -> System.out.println(z));
 
 		String[] name = { "LA01", "LA02", "LA03", "LA" };
-		Stream.of(name).filter(x -> x.length() == 2).forEach(x -> System.out.println(x));
+		Stream.of(name).filter(x -> x.length() == 2)
+				.forEach(x -> System.out.println(x + "" + Thread.currentThread().getName()));
+
+		List<Integer> listOfNumbers = Arrays.asList(222, 232, 43, 543);
+		listOfNumbers.stream().forEach(number -> System.out.println(number + " " + Thread.currentThread().getName()));
 
 	}
 
